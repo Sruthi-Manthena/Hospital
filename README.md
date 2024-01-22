@@ -31,9 +31,10 @@ The subgraph implements various relationships between entities:
 - **Many-Many Relationship**: Example - Doctors associated with multiple patients.
 - **Reverse Lookups**: Example - Finding associated patients for a given doctor.
 
-### 3. Full Text Search
+### 3. Features
 
-A full-text search capability is added to the subgraph for enhanced querying. It allows searching for entities based on text documents in specific fields.
+- **Full-text Search
+- **Non Fatal Errors
 
 ## Usage
 
