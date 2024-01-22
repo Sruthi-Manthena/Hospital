@@ -5,6 +5,7 @@ schema:
   file: ./schema.graphql
 features:
   - fullTextSearch
+  - nonFatalErrors
 dataSources:
   - kind: ethereum
     name: hospital
