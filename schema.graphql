@@ -3,9 +3,6 @@ type Appointments @entity(immutable: true) {
   doctorAddress: Bytes! # address
   date: BigInt! # uint256
   description: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
   medicalRecord: MedicalRecords!
   appointmentSchedules: [AppointmentScheds!]!
 }
@@ -17,9 +14,6 @@ type AppointmentScheds @entity(immutable: true) {
   appointmentId: BigInt! # uint256
   date: BigInt! # uint256
   description: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
   appointment: Appointments!
 }
 
@@ -27,9 +21,6 @@ type AssociatedPatients @entity(immutable: true) {
   id: Bytes!
   doctorAddress: Bytes! # address
   patientId: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
   doctor: Doctors!
 }
 
@@ -38,9 +29,6 @@ type BillingRecords @entity(immutable: true) {
   patientAddress: Bytes! # address
   medicalRecordId: BigInt! # uint256
   recordId: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
   medicalRecord: MedicalRecords!
 }
 
@@ -48,9 +36,6 @@ type Doctors @entity(immutable: true) {
   id: Bytes!
   patientAddress: Bytes! # address
   doctorAddress: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
   associatedPatients: [AssociatedPatients!]!
 }
 
@@ -58,18 +43,12 @@ type DoctorsDatas @entity(immutable: true) {
   id: Bytes!
   doctorAddress: Bytes! # address
   data: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
 }
 
 type EmergencyContacts @entity(immutable: true) {
   id: Bytes!
   patientAddress: Bytes! # address
   newEmergencyContact: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
 }
 
 type InsuranceClaims @entity(immutable: true) {
@@ -77,9 +56,6 @@ type InsuranceClaims @entity(immutable: true) {
   patientAddress: Bytes! # address
   medicalRecordId: BigInt! # uint256
   claimId: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
 }
 
 type _Schema_
@@ -101,9 +77,6 @@ type MedicalRecords @entity(immutable: true) {
   treatments: String! # string
   surgeries: String! # string
   status: Int! # uint8
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
   appointment: Appointments!
   billingRecords: [BillingRecords!]!
 
@@ -116,16 +89,10 @@ type Prescriptions @entity(immutable: true) {
   medication: String! # string
   dosage: String! # string
   frequency: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
 }
 
 type Surgeries @entity(immutable: true) {
   id: Bytes!
   doctorAddress: Bytes! # address
   surgeryDetails: String! # string
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
 }

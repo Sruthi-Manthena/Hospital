@@ -32,11 +32,6 @@ export function handleAppointments(event: AppointmentsEvent): void {
   entity.doctorAddress = event.params.doctorAddress
   entity.date = event.params.date
   entity.description = event.params.description
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -49,11 +44,6 @@ export function handleAppointmentScheds(event: AppointmentSchedsEvent): void {
   entity.appointmentId = event.params.appointmentId
   entity.date = event.params.date
   entity.description = event.params.description
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -63,10 +53,6 @@ export function handleAssociatedPatients(event: AssociatedPatientsEvent): void {
   )
   entity.doctorAddress = event.params.doctorAddress
   entity.patientId = event.params.patientId
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
 
   entity.save()
 }
@@ -78,11 +64,6 @@ export function handleBillingRecords(event: BillingRecordsEvent): void {
   entity.patientAddress = event.params.patientAddress
   entity.medicalRecordId = event.params.medicalRecordId
   entity.recordId = event.params.recordId
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -92,11 +73,6 @@ export function handleDoctors(event: DoctorsEvent): void {
   )
   entity.patientAddress = event.params.patientAddress
   entity.doctorAddress = event.params.doctorAddress
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -106,11 +82,6 @@ export function handleDoctorsDatas(event: DoctorsDatasEvent): void {
   )
   entity.doctorAddress = event.params.doctorAddress
   entity.data = event.params.data
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -120,10 +91,6 @@ export function handleEmergencyContacts(event: EmergencyContactsEvent): void {
   )
   entity.patientAddress = event.params.patientAddress
   entity.newEmergencyContact = event.params.newEmergencyContact
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
 
   entity.save()
 }
@@ -135,11 +102,6 @@ export function handleInsuranceClaims(event: InsuranceClaimsEvent): void {
   entity.patientAddress = event.params.patientAddress
   entity.medicalRecordId = event.params.medicalRecordId
   entity.claimId = event.params.claimId
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -155,11 +117,6 @@ export function handleMedicalRecords(event: MedicalRecordsEvent): void {
   entity.treatments = event.params.treatments
   entity.surgeries = event.params.surgeries
   entity.status = event.params.status
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -172,11 +129,6 @@ export function handlePrescriptions(event: PrescriptionsEvent): void {
   entity.medication = event.params.medication
   entity.dosage = event.params.dosage
   entity.frequency = event.params.frequency
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
 
@@ -188,10 +140,5 @@ export function handleSurgeries(event: SurgeriesEvent): void {
     )
   entity.doctorAddress = event.params.doctorAddress
   entity.surgeryDetails = event.params.surgeryDetails
-
-  entity.blockNumber = event.block.number
-  entity.blockTimestamp = event.block.timestamp
-  entity.transactionHash = event.transaction.hash
-
   entity.save()
 }
