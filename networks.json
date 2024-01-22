@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "hospital": {
+      "address": "0x9240dDc345D7084cC775EB65F91f7194DbBb48d8",
+      "startBlock": 2305717
+    }
+  }
+}
