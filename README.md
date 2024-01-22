@@ -33,8 +33,8 @@ The subgraph implements various relationships between entities:
 
 ### 3. Features
 
-- **Full-text Search
-- **Non Fatal Errors
+- Full-text Search
+- Non Fatal Errors
 
 ## Usage
 
